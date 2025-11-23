@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { CacheData } from './types';
+import fs from 'node:fs';
+import type { CacheData } from './types';
 import { logger } from './logger';
 
 export function loadCache(cacheFile: string): CacheData {

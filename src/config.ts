@@ -1,4 +1,4 @@
-import path from 'path';
+import path from 'node:path';
 
 // --- File Paths ---
 export const DEFAULT_INPUT_FILE = path.join('data', 'companies_to_be_checked.txt');

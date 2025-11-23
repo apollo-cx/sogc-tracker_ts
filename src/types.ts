@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: <explanation> */
 export interface CompanyInfo {
     company_name: string;
     company_uid: string;

@@ -1,10 +1,10 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import * as config from './config';
 import { logger } from './logger';
 import { ZefixAPI } from './zefixSearch';
 import { loadCache, saveCache } from './cacheManager';
-import { CompanyInfo, CacheData } from './types';
+import type { CompanyInfo, CacheData } from './types';
 
 // Utility for delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -48,7 +48,7 @@ async function processCompanies(
 
     for (const companyName of companies) {
         // 1. Check cache
-        if (Object.prototype.hasOwnProperty.call(cacheData, companyName)) {
+        if (Object.hasOwn(cacheData, companyName)) {
             const cachedEntry = cacheData[companyName];
             if (cachedEntry === null) {
                 logger.info("Cache hit (Not Found): %s", companyName);

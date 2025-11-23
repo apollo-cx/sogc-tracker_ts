@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: <explanation> */
 import fs from 'fs';
 import { DEFAULT_LOG_FILE } from './config';
 

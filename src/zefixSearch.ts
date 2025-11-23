@@ -1,6 +1,6 @@
 import { ZEFIX_BASE_URL } from './config';
 import { logger } from './logger';
-import { CompanyInfo, ZefixResponse } from './types';
+import type { CompanyInfo, ZefixResponse } from './types';
 
 export class ZefixAPI {
     private baseUrl: string;
